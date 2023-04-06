@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { postUser } from '../api';
 
 function UserForm() {
   const [username, setUsername] = useState('');
@@ -9,7 +10,7 @@ function UserForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(username); // replace this with your own logic to handle the username
+    postUser(username);
   };
 
   return (
