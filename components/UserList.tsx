@@ -3,17 +3,17 @@ import { getUsers } from '../api';
 import '../style.css';
 
 export const UserList = () => {
-  const [users, setUsers] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    getUsers().then((users) => setUsers(users));
+    getUsers().then((users) => setData(users));
   }, []);
 
   return (
     <div>
       <h2>User List</h2>
       <ul>
-        {users.map((user, index) => (
+        {data?.map((user, index) => (
           <li key={index}>{user.username}</li>
         ))}
       </ul>

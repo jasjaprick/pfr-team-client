@@ -1,48 +1,33 @@
 import React, { useState } from 'react';
 
-const userRoles = [
-  'Product Owner',
-  'Data Analyst',
-  'Web Developer',
-  'Backend Developer',
-];
-
-export function UserForm() {
+function UserForm() {
   const [username, setUsername] = useState('');
-  const [userRole, setUserRole] = useState('');
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
 
-  const handleUserRoleChange = (event) => {
-    setUserRole(event.target.value);
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    const newUser = { username, userRole };
-    setUsername('');
-    setUserRole('');
+    console.log(username); // replace this with your own logic to handle the username
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <label>
         Username:
-        <input type="text" value={username} onChange={handleUsernameChange} />
+        <input
+          className="input-field"
+          type="text"
+          value={username}
+          onChange={handleUsernameChange}
+        />
       </label>
-      <label>
-        User Role:
-        <select value={userRole} onChange={handleUserRoleChange}>
-          {userRoles.map((role) => (
-            <option key={role} value={role}>
-              {role}
-            </option>
-          ))}
-        </select>
-      </label>
-      <button type="submit">Add User</button>
+      <button type="submit" className="submit-burron">
+        Submit
+      </button>
     </form>
   );
 }
+
+export default UserForm;
