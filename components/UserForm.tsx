@@ -23,7 +23,7 @@ function UserForm() {
           onChange={handleUsernameChange}
         />
       </label>
-      <button type="submit" className="submit-burron">
+      <button type="submit" className="submit-button">
         Submit
       </button>
     </form>

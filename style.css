@@ -24,8 +24,8 @@ label {
 }
 
 .submit-button {
-  background-color: #0066cc;
-  color: #fff;
+  background-color: #fcba03;
+  color: #000;
   border: none;
   border-radius: 4px;
   padding: 8px 16px;
@@ -34,5 +34,5 @@ label {
 }
 
 .submit-button:hover {
-  background-color: #004f99;
+  background-color: #a66f0a;
 }
